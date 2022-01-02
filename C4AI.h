@@ -1,4 +1,7 @@
 //Made by Brycen Tanaka
+#ifndef _C4AI_
+#define _C4AI_
+
 #include "board.h"
 #include <cmath>
 #include <iostream>
@@ -553,3 +556,4 @@ class C4AI{
     private:
     int Strength;
 }; 
+#endif // _C4AI_

@@ -1,5 +1,8 @@
 //Made by Brycen Tanaka
 //Based on https://towardsdatascience.com/creating-the-perfect-connect-four-ai-bot-c165115557b0
+#ifndef _BOARD_
+#define _BOARD_
+
 #include <iostream>
 #include <list>
 #include <cstdlib>
@@ -158,3 +161,5 @@ class C4{
 
     int Height[7];
 };
+
+#endif // _BOARD_

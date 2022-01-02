@@ -1,4 +1,7 @@
 //Made by Brycen Tanaka
+#ifndef _DYNAMICARRAY_
+#define _DYNAMICARRAY_
+
 #include <cstdlib>
 #include <iostream>
 
@@ -134,3 +137,4 @@ private:
     int used_;
 };
 
+#endif // _DYNAMICARRAY_
