@@ -42,10 +42,10 @@ class C4{
             }
             cout << '|' << endl;
         }
-        cout << endl;
+        cout << " 1 2 3 4 5 6 7" << endl;
     }
 
-    long long move(int col){
+    long move(int col){
         //check if col is filled or not
         if (isvalidmove(col)){
             long long bitboard;

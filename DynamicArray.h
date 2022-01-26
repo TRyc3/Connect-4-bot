@@ -68,21 +68,21 @@ private:
     int used_;
 };
 
-class LLDarr{
+class LDarr{
 public:
-    LLDarr() {
+    LDarr() {
         used_ = 0;
         capacity_ = 0;
         data_ = nullptr;
     }
 
-    void insert(long long in){
+    void insert(long in){
         if (capacity_ == 0) {
             capacity_++;
-            data_ = new long long[capacity_];
+            data_ = new long[capacity_];
         } else if (capacity_ == used_) {
             capacity_ *= 2;
-            long long *temp = new long long[capacity_];
+            long *temp = new long[capacity_];
             for (int i = 0; i < used_; i++) {
                 temp[i] = data_[i];
             }
@@ -93,7 +93,7 @@ public:
         used_++;
     }
 
-    bool contains (long long target){
+    bool contains (long target){
         for (int i = used_; i > 0; i--){
             if (data_[i] == target){
                 return true;
@@ -102,7 +102,7 @@ public:
         return false;
     }
 
-    bool twoinarow(long long one, long long two){
+    bool twoinarow(long one, long two){
         for (int i = 0; i < used_ - 1; i += 2){
             if (data_[i] == one && data_[i + 1] == two){
                 return true;
@@ -125,14 +125,14 @@ public:
         return data_[target];
     }    
 
-    void operator =(LLDarr rhs){
+    void operator =(LDarr rhs){
         data_ = rhs.data_;
         capacity_ = rhs.capacity_;
         used_ = rhs.used_;
     }
 
 private:
-    long long* data_;
+    long* data_;
     int capacity_;
     int used_;
 };

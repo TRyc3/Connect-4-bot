@@ -17,8 +17,8 @@ class C4AI{
     int evaluate(C4 & board, int player, int pos){
         if (board.move(pos) != -1){
             
-            long long bitboard;
-            long long ebitboard;
+            long bitboard;
+            long ebitboard;
 
             if (player == 0){
                     bitboard = board.black();
@@ -49,7 +49,7 @@ class C4AI{
             score = (4 - abs(3 - pos)) * 10;
 
             //assign points based on # of twos and threes in a row
-            long long target = bitboard & (bitboard >> 1);
+            long target = bitboard & (bitboard >> 1);
             if (target != 0){
                 int count = 0;
                 while (target > 0){
@@ -431,7 +431,7 @@ class C4AI{
     }
 
 
-    int alphabeta(C4 & board, int depth, int alpha, int beta, int player, LLDarr & alreadyseen, bool maximizing){        
+    int alphabeta(C4 & board, int depth, int alpha, int beta, int player, LDarr & alreadyseen, bool maximizing){        
         if (depth > 0){
             if (maximizing){
                 int score = alphabeta(board, depth - 1, alpha, beta, player, alreadyseen, false);
@@ -538,7 +538,7 @@ class C4AI{
         int max = 0;
         int pos = 0;
         int player = board.movescount() % 2;
-        LLDarr seen;
+        LDarr seen;
 
         for (int i = 0; i < 7; i++){
             if (board.move(i) != -1){
